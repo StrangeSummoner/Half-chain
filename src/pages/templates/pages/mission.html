@@ -6,12 +6,12 @@
 {% block content %}
     <header class="page-header" data-background="">
         <div class="container">
-            <h2>Feature Detail</h2>
-            <p><a href="https://garantiwebdesign.com/wordpress/metan/" class="headerbreadcrumb">Home</a> <i class="flaticon-right-chevron"></i>Feature Detail</p>
+            <h2>Our Mission</h2>
         </div>
         <!-- end container -->
     </header>
     <main>
+
         <!--Feature Detail-->
         <section class="hizmetlerr-bolumu">
             <div class="h-yazi-ozel h-yazi-margin-ozel">
@@ -39,62 +39,70 @@
                                 <p role="status" aria-live="polite" aria-atomic="true"></p>
                                 <ul></ul>
                             </div>
-                            <form action="/wordpress/metan/feature-detail/#wpcf7-f809-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-                                <div style="display: none;">
-                                    <input type="hidden" name="_wpcf7" value="809" />
-                                    <input type="hidden" name="_wpcf7_version" value="5.6" />
-                                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f809-o1" />
-                                    <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                                </div>
-                                <div class="callbackform wow fadeInUp" data-wow-delay="0.7s">
-                                    <div class="bosluk333"></div>
-                                    <h2 class="h2-baslik-hizmetler-2">
-                                        Information Form<br />
-                                    </h2>
-                                    <p class="paragraf-popup">
-                                        Learn more.
-                                    </p>
-                                    <div class="form-popup">
-                                        <div class="form-popup__grup">
-                                            <span class="wpcf7-form-control-wrap" data-name="text-667"><input type="text" name="text-667" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Full Name" /></span><br
-                                            />
-                                            <label for="text-667" class="form-popup__label"></label>
-                                        </div>
-                                        <div class="form-popup__grup">
-                                            <span class="wpcf7-form-control-wrap" data-name="email-217"><input type="email" name="email-217" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-popup__input" aria-required="true" aria-invalid="false" placeholder="Email Address" /></span><br
-                                            />
-                                            <label for="email-217" class="form-popup__label"></label>
-                                        </div>
-                                        <div class="form-popup__grup">
-                                            <span class="wpcf7-form-control-wrap" data-name="text-661"><input type="text" name="text-661" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Phone Number" /></span><br
-                                            />
-                                            <label for="text-661" class="form-popup__label"></label>
-                                        </div>
-                                        <div class="form-popup__grup">
-                                            <span class="wpcf7-form-control-wrap" data-name="textarea-29"><textarea name="textarea-29" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-popup__input" aria-invalid="false" placeholder="Your Message"></textarea></span><br
-                                            />
-                                            <label for="text-661" class="form-popup__label"></label>
-                                        </div>
-                                        <div class="form-popup__grup">
-                                            <div class="or">
-                                                <input type="submit" value="Submit Form →" class="wpcf7-form-control has-spinner wpcf7-submit custom-buttonf" />
-                                            </div>
-                                        </div>
-                                        <p><br>
-                                    </div>
-                                </div>
-                                <div class="wpcf7-response-output" aria-hidden="true"></div>
-                            </form>
+                            
                         </div>
+
+                        <form method="POST" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                        {% csrf_token %}
+                            <div style="display: none;">
+                                <input type="hidden" name="_wpcf7" value="809" />
+                                <input type="hidden" name="_wpcf7_version" value="5.6" />
+                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f809-o1" />
+                                <input type="hidden" name="_wpcf7_container_post" value="0" />
+                                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                            </div>
+                            <div class="callbackform wow fadeInUp" data-wow-delay="0.7s">
+                                <div class="bosluk333"></div>
+                                <h2 class="h2-baslik-hizmetler-2">
+                                    Information Form<br />
+                                </h2>
+                                <p class="paragraf-popup">
+                                    Learn more.
+                                </p>
+                                <div class="form-popup">
+                                    <div class="form-popup__grup">
+                                        <span class="wpcf7-form-control-wrap" >
+                                            <input type="text" name="full_name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" placeholder="Full Name" />
+                                        </span><br/>
+                                        <label class="form-popup__label"></label>
+                                    </div>
+                                    <div class="form-popup__grup">
+                                        <span class="wpcf7-form-control-wrap" >
+                                            <input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-popup__input" placeholder="Email Address" />
+                                        </span><br/>
+                                        <label class="form-popup__label"></label>
+                                    </div>
+                                    <div class="form-popup__grup">
+                                        <span class="wpcf7-form-control-wrap">
+                                            <input type="text" name="phone_number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" placeholder="Phone Number" />
+                                        </span><br/>
+                                        <label class="form-popup__label"></label>
+                                    </div>
+                                    <div class="form-popup__grup">
+                                        <span class="wpcf7-form-control-wrap" >
+                                            <textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-popup__input" placeholder="Your Message">
+                                            </textarea>
+                                        </span><br/>
+                                        <label class="form-popup__label"></label>
+                                    </div>
+                                    <div class="form-popup__grup">
+                                        <div class="or">
+                                            <input type="submit" value="Submit Form →" class="wpcf7-form-control has-spinner wpcf7-submit custom-buttonf" />
+                                        </div>
+                                    </div>
+                                    <p><br>
+                                </div>
+                            </div>
+                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                        </form>
                     </div>
 
 
                     <div class="col-lg-8">
                         <div class="bosluk44"></div>
                         <div class="galeri wow fadeInRight" data-wow-delay="0.7s">
-                            <img src="https://garantiwebdesign.com/wordpress/metan/wp-content/uploads/2022/11/feature-detail.png" alt="IT Support Services" class="galeri__gorsel galeri__gorsel--3">
+                            <img src="{% static 'pages/img/web-rocket-transparrent-low.png' %}" alt="IT Support Services" class="galeri__gorsel galeri__gorsel--3">
                         </div>
                         <div class="bosluk3"></div>
                         <h2 class="h2-baslik-anasayfa-ozel wow fade">Feature Detail</h2>

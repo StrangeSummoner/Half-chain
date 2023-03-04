@@ -5,6 +5,8 @@
 
 {% block content %}
 
+<link rel="stylesheet" href="{% static 'pages/css/roadmap.css' %}">
+
 <header class="slider">
   <div class="main-slider">
     <div class="swiper-wrapper">
@@ -16,10 +18,10 @@
         </div>
         <div class="container">
           <img class="imagerotateslider1" src="https://garantiwebdesign.com/wordpress/metan/wp-content/uploads/2022/11/rotate-10s.png" alt="">
-          <h1>Half-Chain <br> Connects.</h1>
+          <h1>Half-Chain Connects</h1>
           <p>Let's implement creative and award winning projects<br> together in the world of Metaverse and NFT. </p>
           <div class="bosluk2-55"></div>
-            <a href="#">Buy Land Virtual Immediately →</a>
+            <a href="#">    Coming Soon →   </a>
         </div>
         <img class="efc" src="https://garantiwebdesign.com/wordpress/metan/wp-content/uploads/2022/11/slide222.gif" alt="">
           <div class="metaverse"></div>
@@ -103,9 +105,6 @@
 <header class="page-header" data-background="">
   <div class="container">
     <h2>First NFT Hackathon in Georgia</h2>
-      <p>
-        <a href="https://garantiwebdesign.com/wordpress/metan/" class="headerbreadcrumb">Home</a> <i class="flaticon-right-chevron"></i>Project Detail
-      </p>
   </div>
 <!-- end container -->
 </header>
@@ -116,24 +115,24 @@
     <div class="row">
       <!--Project Detail Görsel Alanı-->
       <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0.5s">
-        <img src="https://garantiwebdesign.com/wordpress/metan/wp-content/uploads/2022/11/pro-detail.jpg" alt="Project Detail" class="prodetal">
+        <img src="{% static 'pages/img/nft-web-page.png' %}" alt="Project Detail" class="prodetal">
       </div>
       <!--Hizmetler Detay Yazı Alanı-->
       <div class="col-lg-6">
         <div class="services-kutu1 wow fadeInLeft" data-wow-delay="0.5s" style="cursor:pointer;">
-          <div class="icon-project-detail"><i class="flaticon-hologram-1"></i></div>
+          <!--<div class="icon-project-detail"><i class="flaticon-hologram-1"></i></div>-->
           <h3 class="baslik-2 h-yazi-margin-kucuk">Project Title</h3>
           <p class="services-kutu1--yazi-p">Moon Project </p>
         </div>
 
         <div class="services-kutu1 wow fadeInLeft" data-wow-delay="0.6s" style="cursor:pointer;">
-          <div class="icon-project-detail"><i class="flaticon-vr-goggles"></i></div>
+          <!--<div class="icon-project-detail"><i class="flaticon-vr-goggles"></i></div>-->
           <h3 class="baslik-2 h-yazi-margin-kucuk">Used Technologies</h3>
           <p class="services-kutu1--yazi-p">AR, VR, artificial intelligence, neural interfaces, blockchain </p>
         </div>
 
         <div class="services-kutu1 wow fadeInLeft" data-wow-delay="0.7s" style="cursor:pointer;">
-          <div class="icon-project-detail"><i class="flaticon-blockchain-5"></i></div>
+          <!--<div class="icon-project-detail"><i class="flaticon-blockchain-5"></i></div>-->
           <h3 class="baslik-2 h-yazi-margin-kucuk">Project Detail</h3>
           <p class="services-kutu1--yazi-p">In this world, the computer screens we use today to connect to a worldwide web of information have become portals to a 3D virtual realm that's palpable -- like real life, only bigger and better. Digital facsimiles of ourselves, or avatars, move freely
                             from one experience to another, taking our identities and our money with us. </p>
@@ -144,13 +143,13 @@
   </div>
 </section>
 
+
+
+
 <!-- Blog Content -->
 <header class="page-header" data-background="">
   <div class="container">
     <h2>Blog</h2>
-    <p>
-      <a href="https://garantiwebdesign.com/wordpress/metan/" class="headerbreadcrumb">Home</a> <i class="flaticon-right-chevron"></i>Blog
-    </p>
   </div>
 <!-- end container -->
 </header>
@@ -286,6 +285,72 @@
     </div>
   </div>
 </section>
+
+<!-- roadmap section -->
+<div class="container-roadmap">
+  <div class="roadmap-wrapper">
+    <div class="row-roadmap">
+      <h2 class="sec-title"> Our Roadmap </h2>
+    </div>
+    <div class="row-roadmap">
+      <div class="roadmap">
+        <div class="year-count">
+          <h2>2021</h2>
+        </div>
+        <div class="roadmap-content">
+          <div class="year-title q1">
+           <h3>Q1</h3>
+            <ul> 
+              <li>MVP Implementation</li>
+            </ul>
+          </div>
+          <div class="year-title q2">
+           <h3>Q2</h3>
+            <ul> 
+              <li>Start developing Gitopia blockchain built with Cosmos SDK</li>
+              <li>Launch first version of Gitopia Webapp</li>
+              <li>Release the git remote helper for Gitopia</li>
+            </ul>
+          </div>
+          <div class="year-title q3">
+           <h3>Q3</h3>
+            <ul> 
+              <li>Release the GitHub Mirror Action for easy migration from GitHub</li>
+              <li>Gitopia Web Wallet release</li>
+              <li>Gitopia Explorer release</li>
+              <li>Exchange listings of LORE token</li>
+            </ul>
+          </div>
+          <div class="year-title q4">
+           <h3>Q4</h3>
+            <ul> 
+              <li>Ecosystem Partnerships</li>
+              <li>Release Organization/ Repository governance</li>
+              <li>Release IBC Interface</li>
+              <li>Launch Gitopia Desktop app</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-roadmap">
+      <div class="roadmap">
+        <div class="year-count Y2022">
+          <h2>2022</h2>
+        </div>
+        <div class="roadmap-content">
+          <div class="year-title q1-2022">
+           <h3>Q1</h3>
+            <ul> 
+              <li>Support CI/CD Integrations</li>
+              <li>Release Static Code Analysis</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
     <!--Info Alanı 2-
     <section class="hakkimizda-bolumu-anasayfa2">
@@ -576,11 +641,63 @@
         </div>
     </section>-->
 
+    <div class="general-container">
+    <section class="form-section">
+        <form method="POST" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+            {% csrf_token %}
+                <div style="display: none;">
+                    <input type="hidden" name="_wpcf7" value="1287" />
+                    <input type="hidden" name="_wpcf7_version" value="5.6" />
+                    <input type="hidden" name="_wpcf7_locale" value="en_US" />
+                    <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1287-o1" />
+                    <input type="hidden" name="_wpcf7_container_post" value="0" />
+                    <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+                </div>
+                <div class="form">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl">
+                                <div class="form__grup wow fadeInLeft" data-wow-delay="0.5s">
+                                    <span class="wpcf7-form-control-wrap" data-name="text-667"><input type="text" name="full_name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Full Name" /></span>
+                                </div>
+                            </div>
+                            <div class="col-xl">
+                                <div class="form__grup wow fadeInLeft" data-wow-delay="0.6s">
+                                    <span class="wpcf7-form-control-wrap" data-name="email-217"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-popup__input" aria-required="true" aria-invalid="false" placeholder="Email Address" /></span>
+                                </div>
+                            </div>
+                            <div class="col-xl">
+                                <div class="form__grup wow fadeInRight" data-wow-delay="0.7s">
+                                    <span class="wpcf7-form-control-wrap" data-name="text-661"><input type="text" name="phone_number" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Phone Number" /></span>
+                                </div>
+                            </div>
+                            <div class="col-xl-12">
+                                <div class="form__grup wow fadeInRight" data-wow-delay="0.8s">
+                                    <span class="wpcf7-form-control-wrap" data-name="textarea-29"><textarea name="message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-popup__input" aria-invalid="false" placeholder="Your Message"></textarea></span>
+                                </div>
+                            </div>
+                            <div class="col-xl-12 wow fadeInUp" data-wow-delay="0.9s">
+                                <div class="form__grup">
+                                    <input type="submit" value="Submit Form →" class="wpcf7-form-control has-spinner wpcf7-submit custom-button-form" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wpcf7-response-output" aria-hidden="true"></div>
+            </form>
+            {% if form_errors %}
+                <script>
+                    <p>{{ form_errors }}</p>
+                </script>
+            {% endif %}
+    </section>
+
     <!--Qua Section-->
     <section class="qua1-top">
         <div class="container">
-            <div class="row">
-                <div class="col-xl-6">
+            
+                
                     <div class="bosluk2dt"></div>
                     <h2 class="h2-baslik-hizmetler-223 wow fadeInLeft" data-wow-delay="0.5s" style="visibility: visible;">
                         Learn More About Metaverse </h2>
@@ -589,60 +706,35 @@
                         Imagine a virtual world where billions of people live, work, shop, learn and interact with each other from the comfort of their seats in the physical world.<br><br> Get everything you need for metaverse living: XR apps, devices,
                         tools, services, and more. The open, secure metaverse for individuals, enterprises, and developers. Explore today! <br><br> Preparing your brand for the new realities of marketing. Enter the world of the metaverse to accelerate
                         brand value through digital innovation. For more information, fill out the form on the side. </p>
-                </div>
+                
                 <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.5s">
                     <div role="form" class="wpcf7" id="wpcf7-f1287-o1" lang="en-US" dir="ltr">
                         <div class="screen-reader-response">
                             <p role="status" aria-live="polite" aria-atomic="true"></p>
                             <ul></ul>
                         </div>
-                        <form action="/wordpress/metan/#wpcf7-f1287-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
-                            <div style="display: none;">
-                                <input type="hidden" name="_wpcf7" value="1287" />
-                                <input type="hidden" name="_wpcf7_version" value="5.6" />
-                                <input type="hidden" name="_wpcf7_locale" value="en_US" />
-                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f1287-o1" />
-                                <input type="hidden" name="_wpcf7_container_post" value="0" />
-                                <input type="hidden" name="_wpcf7_posted_data_hash" value="" />
-                            </div>
-                            <div class="form">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-xl">
-                                            <div class="form__grup wow fadeInLeft" data-wow-delay="0.5s">
-                                                <span class="wpcf7-form-control-wrap" data-name="text-667"><input type="text" name="text-667" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Full Name" /></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl">
-                                            <div class="form__grup wow fadeInLeft" data-wow-delay="0.6s">
-                                                <span class="wpcf7-form-control-wrap" data-name="email-217"><input type="email" name="email-217" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-popup__input" aria-required="true" aria-invalid="false" placeholder="Email Address" /></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl">
-                                            <div class="form__grup wow fadeInRight" data-wow-delay="0.7s">
-                                                <span class="wpcf7-form-control-wrap" data-name="text-661"><input type="text" name="text-661" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-popup__input" aria-required="true" aria-invalid="false" placeholder="Phone Number" /></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12">
-                                            <div class="form__grup wow fadeInRight" data-wow-delay="0.8s">
-                                                <span class="wpcf7-form-control-wrap" data-name="textarea-29"><textarea name="textarea-29" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea form-popup__input" aria-invalid="false" placeholder="Your Message"></textarea></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-12 wow fadeInUp" data-wow-delay="0.9s">
-                                            <div class="form__grup">
-                                                <input type="submit" value="Submit Form →" class="wpcf7-form-control has-spinner wpcf7-submit custom-button-form" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="wpcf7-response-output" aria-hidden="true"></div>
-                        </form>
+                        
                     </div>
                 </div>
-            </div>
+            
         </div>
     </section>
+    </div>
+
+    <style>
+        .wpcf7-form {
+            /*background-color: black !important;*/
+            background: #000000 url(https://garantiwebdesign.com/wordpress/metan/wp-content/uploads/2022/09/star.png) repeat top center;
+        }
+
+        .markalar {
+            padding-top: 50px;
+        }
+
+        .container {
+            padding-bottom: 80px;
+        }
+    </style>
 
     <!-- Customer Feedback 
     <section class="yorumlar-alani-sayfa">

@@ -68,6 +68,9 @@
     <link rel='stylesheet' id='odometer-css' href='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/css/odometer.min.css?ver=1' media='all' />
     <link rel='stylesheet' id='flaticon-css' href="{% static 'pages/css/flaticon.css' %}" media='all' />
     <link rel='stylesheet' id='custom-css' href='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/custom.css?ver=1' media='all' />
+    <link rel="stylesheet" href="{% static 'pages/css/roadmap.css' %}">
+
+
     <link rel="https://api.w.org/" href="https://garantiwebdesign.com/wordpress/metan/wp-json/" />
     <link rel="alternate" type="application/json" href="https://garantiwebdesign.com/wordpress/metan/wp-json/wp/v2/pages/5" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://garantiwebdesign.com/wordpress/metan/xmlrpc.php?rsd" />
@@ -2225,7 +2228,7 @@ responsive
     <title>{% block title %}{% endblock %}</title>
 
 
-    <link rel="shortcut icon" type="image/png" href="{% static 'pages/img/logo.png' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'pages/img/logo-nameless.png' %}">
 
 
     <!--<meta name="description" content="Custom IT Solutions for Your Business. We are at your service with our reliable service understanding and professional team."-->
@@ -2234,7 +2237,13 @@ responsive
 <body>
   <div class="preloader">
     <figure> 
-      <img src="https://garantiwebdesign.com/wordpress/metan/wp-content/uploads/2022/11/metan-loader.png" alt="Image"> 
+      <img src="{% static 'pages/img/logo.png' %}" alt="Image"> 
+      <style>
+        .preloader img{
+            width: 230px !important;
+            height: 105px !important; 
+        }
+      </style>
     </figure>
   </div>
 
@@ -2265,15 +2274,33 @@ responsive
               Tbilisi, Georgia
             <div class="bosluksv"></div>
             <div class="or">
-                <a href="https://www.facebook.com/HalfChain" target="_blank">
-                    <i class="flaticon-facebook-1 iconsocia"></i>
+                <a class="side-icon fb" href="https://www.facebook.com/HalfChain" target="_blank">
+                    <img class="iconsocia" src="{% static 'pages/img/facebook.png' %}">
                 </a>
-                <a href="https://www.instagram.com/half_chain/" target="_blank">
-                    <i class="flaticon-instagram-1 iconsociai"></i>
+                <a class="side-icon ig" href="https://www.instagram.com/half_chain/" target="_blank">
+                    <img class="iconsocia" src="{% static 'pages/img/instagram.png' %}">
                 </a>
-                <a href="https://twitter.com/Half_Chain" target="_blank">
-                    <i class="flaticon-twitter-1 iconsocia"></i>
+                <a class="side-icon twt" href="https://twitter.com/Half_Chain" target="_blank">
+                    <img class="iconsocia" src="{% static 'pages/img/twitter.png' %}">
                 </a>
+                <a class="side-icon lin" href="https://www.linkedin.com/company/86815573/" target="_blank">
+                    <img class="iconsocia" src="{% static 'pages/img/linkedin.png' %}">
+                </a>
+                <a class="side-icon discord" href="https://discord.gg/kF6hUU7esG" target="_blank">
+                    <img class="iconsocia" src="{% static 'pages/img/discord.png' %}">
+                </a>
+                <a class="side-icon yt" href="https://www.youtube.com/@half-chain/featured" target="_blank">
+                    <img class="iconsocia" src="{% static 'pages/img/youtube.png' %}">
+                </a>
+                <style>
+                    .side-icon img{
+                        width: 25px;
+                        height: 25px;
+                        background-color: none;
+
+                        margin-bottom: 10px;
+                    }
+                </style>
             </div>
           </address>
         </div>
@@ -2308,7 +2335,7 @@ responsive
                     </ul>
                   </li>
                   <li id="menu-item-3353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active menu-item-3353 nav-item">
-                    <a itemprop="url" href="{% url 'pages-app:services-view' %}" class="nav-link" aria-current="page">
+                    <a itemprop="url" href="#" class="nav-link" aria-current="page">
                       <span itemprop="name">Services</span>
                     </a>
                   </li>
@@ -2369,7 +2396,7 @@ responsive
         </div>
 
         <small>
-          © 2023 Half-Chain - All Rights Reserved.        
+          © Copyright 2022 Digital Platform LLC. All rights reserved       
         </small> 
     </div>
   </aside>
@@ -2380,7 +2407,7 @@ responsive
       <!-- Logo Menu Desktop -->
       <div class="logo"> 
         <a href="{% url 'pages-app:home-view' %}">
-          <img src="{% static 'pages/img/logo.png' %}" width="90px" height="140px" alt="Image">        
+          <img src="{% static 'pages/img/logo-nameless.png' %}" alt="Image">        
         </a>
       </div>
 
@@ -2411,7 +2438,7 @@ responsive
                 </ul>
               </li>
               <li id="menu-item-322" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item active menu-item-322 nav-item">
-                <a itemprop="url" href="{% url 'pages-app:services-view' %}" class="nav-link" aria-current="page">
+                <a itemprop="url" href="#" class="nav-link" aria-current="page">
                   <span itemprop="name">Services</span>
                 </a>
               </li>
@@ -2473,7 +2500,9 @@ responsive
       <div class="hamburger-menu"> <span></span> <span></span> <span></span> </div>
 
       <div class="navbar-button">
-        <div class="telh" onclick="location.href='#';" style="cursor:pointer;"><i class="flaticon-vr-goggles iconp"></i>&nbsp;&nbsp;&nbsp;Get Your Virtual Land →
+        <div class="telh" onclick="location.href='#';" style="cursor:pointer;">
+            <!--<i class="flaticon-vr-goggles iconp"></i>-->
+            &nbsp;&nbsp;&nbsp;Become Partner →
         </div>
       </div>
       
@@ -2501,7 +2530,7 @@ responsive
                   <a href="{% url 'pages-app:about-us-view' %}">About Us</a>
                 </li>
                 <li id="menu-item-1737" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1737">
-                    <a href="{% url 'pages-app:services-view' %}">Services</a>
+                    <a href="{% url 'pages-app:mission-view' %}">Mission</a>
                   </li>
                 <li id="menu-item-3936" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3936">
                   <a href="{% url 'pages-app:privacy-policy-view' %}">Privacy Policy</a>
@@ -2529,7 +2558,41 @@ responsive
             <li>
                 <a href="https://twitter.com/Half_Chain" target="_blank"><i class="flaticon-twitter-1 iconsociaf"></i></a>
             </li>
+            <li>
+                <a class="footer-social-img" href="https://www.linkedin.com/company/86815573/" target="_blank">
+                    <img src="{% static 'pages/img/linkedin2.png' %}" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="footer-social-img discord" href="https://discord.gg/kF6hUU7esG" target="_blank">
+                    <img src="{% static 'pages/img/discord.png' %}" alt="">
+                </a>
+            </li>
+            <li>
+                <a class="footer-social-img youtube" href="https://www.youtube.com/@half-chain/featured" target="_blank">
+                    <img src="{% static 'pages/img/youtube.png' %}" alt="">
+                </a>
+            </li>
           </ul>
+          <style>
+            .footer-social-img img {
+                margin-bottom: 14px;
+                width: 25px;
+                height: 25px;
+            }
+
+            .footer-social-img.discord img{
+                margin-bottom: 10px;
+                width: 29px;
+                height: 29px;
+            }
+
+            .footer-social-img .youtube img{
+                margin-top: 7px;
+                width: 29px;
+                height: 29px;
+            }
+        </style>
 
         </div>
       </div>
@@ -2540,7 +2603,7 @@ responsive
     <div class="container">
       <div class="row">
         <div class="col-12">
-          <p class="copyright">© 2023 Half-Chain - All Rights Reserved.</p>
+          <p class="copyright">© Copyright 2022 Digital Platform LLC. All rights reserved</p>
         </div>
       </div>
     </div>
@@ -2574,10 +2637,11 @@ responsive
     <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/js/scripts.js?ver=1' id='scripts-js'></script>
     <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/js/3d.jquery.js?ver=1' id='3d-js'></script>
     <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/js/magnific.js?ver=1' id='magnific-js'></script>
-    <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/js/mag.js?ver=1' id='mag-js'></script>
+    <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/js/mag.js?ver=1' id='mag-js'></script><script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/custom.js?ver=1' id='custom-js'></script>
     <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/js/pointer.js?ver=1' id='pointer-js'></script>
     <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/js/yukari-cik.js?ver=1' id='yukari-cik-js'></script>
     <script src='https://garantiwebdesign.com/wordpress/metan/wp-content/themes/metan/custom.js?ver=1' id='custom-js'></script>
+    <script src="{% static 'pages/js/roadmap.js' %}"></script>
     <!--Cursor Script-->
     <script>
         init_pointer({
